@@ -1,0 +1,15 @@
+tdCounter:
+  options:
+    collate: utf8_general_ci
+    charset: utf8
+  actAs:
+    Timestampable:
+      updated:
+        disabled: true
+  columns:
+    ref_ip:
+      type: string(32)
+      notnull: true
+    agent:
+      type: string(255)
+      notnull: true

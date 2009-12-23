@@ -1,0 +1,42 @@
+tdVisitorCounterPlugin
+======================
+
+Provides funcionalities for easy visitor counting feature, including schema,
+libs, interface and a flash panel to display latest visiting stats.
+
+This plugin is a part of TD CMS and is based on Doctrine ORM.
+
+Installation
+============
+
+Install the plugin via the subversion repository by executing the following
+command from the project root directory:
+
+    $ svn co http://svn.symfony-project.com/plugins/tdVisitorCounterPlugin/trunk plugins/tdVisitorCounterPlugin
+
+or by using the default symfony plugin install command:
+
+    $ ./symfony plugin:install tdVisitorCounterPlugin
+
+Usage
+=====
+
+    * Re-run building your model.
+
+    * If you wish, you may generate some fixture data for the visitors counter
+      (using _data/fixtures/fixtures.yml_ file).
+
+    * enable the tdVisitorCounter module in your backend application.
+
+    * make sure the config/routing.yml file is uncommented.
+
+    * append the following code inside your main frontend application template
+      (e. g. layout.php):
+
+    [php]
+    
+
+Dependencies
+=============
+
+  * [stOfcPlugin](http://www.symfony-project.org/plugins/stOfcPlugin)

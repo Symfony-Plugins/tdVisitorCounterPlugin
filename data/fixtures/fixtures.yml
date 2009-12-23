@@ -1,0 +1,20 @@
+<?php
+srand();
+function getRandomIP() {
+  return rand(0,255).'.'.rand(0,255).'.'.rand(0,255).'.'.rand(0,255);
+}
+function getRandomAgent() {
+  switch (rand(0,9)) {
+    case 0: case 1: case 2: case 3: return 'Firefox';
+    case 4: case 5: case 6: return 'Internet Explorer';
+    case 7: case 8: return 'Opera';
+    case 9: return 'Safari';
+  }
+}?>
+tdCounter:
+<?php for($i = 0; $i < 1000; $i++): ?>
+  counter_<?php echo $i ?>:
+    ref_ip: <?php echo getRandomIP()."\n" ?>
+    agent: <?php echo getRandomAgent()."\n" ?>
+    created_at: <?php echo '\'2009-'.rand(1,12).'-'.rand(1,28).' '.rand(0,23).':'.rand(0,59).':'.rand(0,59)."'\n" ?>
+<?php endfor; ?>

@@ -1,0 +1,11 @@
+td_visitor_counter:
+  url:   /visitors
+  param: { module: tdVisitorCounter, action: index }
+
+td_ofc_data_visitor_counter_monthly:
+  url:   /visitors-monthly-data
+  param: { module: tdVisitorCounter, action: ofcDataVisitorsMonthly }
+
+td_ofc_data_visitor_counter_daily:
+  url:   /visitors-daily-data
+  param: { module: tdVisitorCounter, action: ofcDataVisitorsDaily }
