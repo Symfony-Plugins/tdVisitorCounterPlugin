@@ -10,7 +10,7 @@
   <email>tomasz.ducin@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-12-23</date>
+ <date>2009-12-24</date>
  <time>11:00:00</time>
  <version>
    <release>0.1.0</release>
@@ -107,7 +107,7 @@
      <api>beta</api>
     </stability>
     <license uri="http://www.symfony-project.org/license">MIT license</license>
-    <date>2009-12-23</date>
+    <date>2009-12-24</date>
     <license>MIT</license>
     <notes>
      * initial import

@@ -4,7 +4,7 @@ tdVisitorCounterPlugin
 Provides funcionalities for easy visitor counting feature, including schema,
 libs, interface and a flash panel to display latest visiting stats.
 
-This plugin is a part of TD CMS and is based on Doctrine ORM.
+This plugin is a part of __TD CMS__ and is based on __Doctrine ORM__.
 
 Installation
 ============
@@ -21,20 +21,32 @@ or by using the default symfony plugin install command:
 Usage
 =====
 
-    * Re-run building your model.
+  * Re-run building your model (td_counter table holds data about users visits).
 
-    * If you wish, you may generate some fixture data for the visitors counter
-      (using _data/fixtures/fixtures.yml_ file).
+  * If you wish, you may generate some fixture data for the visitors counter
+    (using _data/fixtures/fixtures.yml_ file).
 
-    * enable the tdVisitorCounter module in your backend application.
+  * enable the tdVisitorCounter module in your backend application, so that you
+    may use the statitics about user visits using open flash chart.
 
-    * make sure the config/routing.yml file is uncommented.
+  * make sure the config/routing.yml file is uncommented (otherwise you will
+    have to create your own routing entries forwarding to _index_ action of
+    _tdVisitorCounter_ module).
 
-    * append the following code inside your main frontend application template
-      (e. g. layout.php):
+  * append the following code inside your main frontend application template
+    (e. g. layout.php):
 
-    [php]
-    
+        [php]
+        if (!$sf_request->getCookie('counter'))
+        {
+            $sf_response->setCookie('counter', 'visited', time() + 180);
+            tdCounterTable::mark();
+        }
+
+    which adds a single visitor entry to the database. This mechanisms relies on
+    browser cookies - if the _visited_ cookie doesn't exist, such a cookie is
+    created (existing 3 minutes by default) and an entry to the td_counter table
+    is added.
 
 Dependencies
 =============
