@@ -116,6 +116,7 @@
     <license>MIT</license>
     <notes>
      * separated tdVisitorManager class for performing visits marking
+     * number of days/months in a chart bug fixed
      * dependency set for stOfcPlugin
      * changeable life time for visitor cookie
      * expanded readme: sample stats images
