@@ -37,11 +37,7 @@ Usage
     (e. g. layout.php):
 
         [php]
-        if (!$sf_request->getCookie('counter'))
-        {
-            $sf_response->setCookie('counter', 'visited', time() + sfConfig::get('td_visitor_counter_cookie_interval'));
-            tdCounterTable::mark();
-        }
+        tdVisitorManager::markVisitor();
 
     which adds a single visitor entry to the database. This mechanisms relies on
     browser cookies - if the _visited_ cookie doesn't exist, such a cookie is
@@ -59,6 +55,19 @@ __config/tdVisitorCounterPluginConfiguration.class.php__ file:
   * _td_visitor_counter_days_ - number of last days shown on the chart.
 
   * _td_visitor_counter_cookie_interval_ - expire time of a visitor cookie.
+
+Statistics demo
+===============
+
+The plugin is provided with two predefined charts:
+
+  * monthly stats
+
+![monthly stats image](http://img138.imageshack.us/img138/7210/monhtly.jpg "monthly stats image")
+
+  * daily stats
+
+![daily stats image](http://img138.imageshack.us/img138/7503/daily.jpg "daily stats image")
 
 Dependencies
 ============
