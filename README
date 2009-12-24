@@ -39,7 +39,7 @@ Usage
         [php]
         if (!$sf_request->getCookie('counter'))
         {
-            $sf_response->setCookie('counter', 'visited', time() + 180);
+            $sf_response->setCookie('counter', 'visited', time() + sfConfig::get('td_visitor_counter_cookie_interval'));
             tdCounterTable::mark();
         }
 
@@ -48,7 +48,19 @@ Usage
     created (existing 3 minutes by default) and an entry to the td_counter table
     is added.
 
-Dependencies
+Configuration
 =============
+
+You can modify settings of the tdVisitorCounterPlugin in the
+__config/tdVisitorCounterPluginConfiguration.class.php__ file:
+
+  * _td_visitor_counter_months_ - number of last months shown on the chart.
+
+  * _td_visitor_counter_days_ - number of last days shown on the chart.
+
+  * _td_visitor_counter_cookie_interval_ - expire time of a visitor cookie.
+
+Dependencies
+============
 
   * [stOfcPlugin](http://www.symfony-project.org/plugins/stOfcPlugin)

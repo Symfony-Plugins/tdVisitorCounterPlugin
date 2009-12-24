@@ -23,5 +23,8 @@ class tdVisitorCounterPluginConfiguration extends sfPluginConfiguration
 
     // number of days for visitor counter statistics
     sfConfig::set('td_visitor_counter_days', 15);
+
+    // number of days for visitor counter statistics
+    sfConfig::set('td_visitor_counter_cookie_interval', 180);
   }
 }
