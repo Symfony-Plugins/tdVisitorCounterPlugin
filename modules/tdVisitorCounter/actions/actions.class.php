@@ -44,8 +44,8 @@ class tdVisitorCounterActions extends sfActions
   */
   public function executeOfcDataVisitorsDaily()
   {
-    $day_count = sfConfig::get('td_visitor_counter_days') - 1;
-    $count_data = Doctrine::getTable('tdCounter')->getLastDaysCounts($day_count)->fetchArray();
+    $day_count = sfConfig::get('td_visitor_counter_days');
+    $count_data = Doctrine::getTable('tdCounter')->getLastDaysCounts($day_count - 1)->fetchArray();
 
     $chartData = array();
     $chartMax = 0;
@@ -102,8 +102,8 @@ class tdVisitorCounterActions extends sfActions
 
   public function executeOfcDataVisitorsMonthly()
   {
-    $month_count = sfConfig::get('td_visitor_counter_months') - 1;
-    $count_data = Doctrine::getTable('tdCounter')->getLastMonthsCounts($month_count)->fetchArray();
+    $month_count = sfConfig::get('td_visitor_counter_months');
+    $count_data = Doctrine::getTable('tdCounter')->getLastMonthsCounts($month_count - 1)->fetchArray();
 
     $chartData = array();
     $chartMax = 0;
