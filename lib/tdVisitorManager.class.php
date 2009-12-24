@@ -17,7 +17,7 @@ class tdVisitorManager
    * Mark a visitor: check if the visitor's browser already has a cookie set,
    * if not - insert a database record.
    */
-  public function markVisitor()
+  static public function markVisitor()
   {
     if (!$_COOKIE['counter'])
     {

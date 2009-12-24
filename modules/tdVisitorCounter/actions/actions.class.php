@@ -10,7 +10,7 @@
 class tdVisitorCounterActions extends sfActions
 {
  /**
-  * Executes index action
+  * Index action shows two charts: visitors count calculated daily and monthly.
   *
   * @param sfRequest A request object
   */
@@ -31,7 +31,7 @@ class tdVisitorCounterActions extends sfActions
       $diff = $result / 5;
       while ($result - $diff > $max)
       {
-        $result--;
+        $result -= $diff;
       }
       return $result;
     }
