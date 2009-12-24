@@ -40,7 +40,7 @@
      </dir>
 
      <dir name="lib">
-       <dir name="fiter">
+       <dir name="filter">
          <dir name="doctrine">
            <file name="PlugintdCounterFormFilter.class.php" role="data" />
          </dir>
