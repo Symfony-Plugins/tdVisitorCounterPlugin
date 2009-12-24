@@ -25,7 +25,7 @@ class PlugintdCounterTable extends Doctrine_Table
       ->select('COUNT(c.id)')
       ->from('tdCounter c')
       ->fetchArray();
-    return $result['COUNT'];
+    return $result[0]['COUNT'];
   }
 
  /**
