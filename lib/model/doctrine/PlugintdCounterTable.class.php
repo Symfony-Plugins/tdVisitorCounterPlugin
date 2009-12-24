@@ -14,6 +14,27 @@ class PlugintdCounterTable extends Doctrine_Table
     $mark->save();
   }
 
+ /**
+  * Retrieves number of all visits.
+  *
+  * @return integer number of visits
+  */
+  static public function getCount()
+  {
+    $result = Doctrine_Query::create()
+      ->select('COUNT(c.id)')
+      ->from('tdCounter c')
+      ->fetchArray();
+    return $result['COUNT'];
+  }
+
+ /**
+  * Returns query retrieving all visits during last days (number of days given
+  * by the parameter).
+  *
+  * @param integer $days number of days for the stats chart.
+  * @return Doctrine_Query query retrieving all visits during last days.
+  */
   static public function getLastDaysCounts($days) {
     return Doctrine_Query::create()
       ->select('COUNT(c.id) AS count, DATE_FORMAT(c.created_at, \'%Y-%m-%d\') AS date')
@@ -23,6 +44,13 @@ class PlugintdCounterTable extends Doctrine_Table
       ->groupBy('DATE_FORMAT(c.created_at, \'%Y-%m-%d\')');
   }
 
+ /**
+  * Returns query retrieving all visits during last months (number of days given
+  * by the parameter).
+  *
+  * @param integer $months number of months for the stats chart.
+  * @return Doctrine_Query query retrieving all visits during last months.
+  */
   static public function getLastMonthsCounts($months) {
     return Doctrine_Query::create()
       ->select('COUNT(c.id) AS count, DATE_FORMAT(c.created_at, \'%Y-%m\') AS date')

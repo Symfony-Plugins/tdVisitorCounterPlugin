@@ -90,7 +90,7 @@
      <exclude>1.5.0</exclude>
     </package>
     <package>
-     <name>sfAdminDashPlugin</name>
+     <name>stOfcPlugin</name>
      <channel>plugins.symfony-project.org</channel>
      <min>0.9.1</min>
     </package>
@@ -119,7 +119,9 @@
      * number of days/months in a chart bug fixed
      * dependency set for stOfcPlugin
      * changeable life time for visitor cookie
+     * added getCount of all visits
      * expanded readme: sample stats images
+     * making up documentation
     </notes>
    </release>
 
