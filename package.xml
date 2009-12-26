@@ -10,7 +10,7 @@
   <email>tomasz.ducin@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-12-25</date>
+ <date>2009-12-26</date>
  <time>11:00:00</time>
  <version>
    <release>0.1.1</release>
@@ -112,7 +112,7 @@
      <api>beta</api>
     </stability>
     <license uri="http://www.symfony-project.org/license">MIT license</license>
-    <date>2009-12-25</date>
+    <date>2009-12-26</date>
     <license>MIT</license>
     <notes>
      * separated tdVisitorManager class for performing visits marking
