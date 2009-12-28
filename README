@@ -52,6 +52,8 @@ Configuration
 You can modify settings of the tdVisitorCounterPlugin in the
 __config/tdVisitorCounterPluginConfiguration.class.php__ file:
 
+  * _td_visitor_counter_cookie_ - name of the cookie used for visitors counting.
+
   * _td_visitor_counter_months_ - number of last months shown on the chart.
 
   * _td_visitor_counter_days_ - number of last days shown on the chart.

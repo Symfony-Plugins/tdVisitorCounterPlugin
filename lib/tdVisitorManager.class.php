@@ -19,9 +19,9 @@ class tdVisitorManager
    */
   static public function markVisitor()
   {
-    if (!isset($_COOKIE['counter']))
+    if (!isset($_COOKIE[sfConfig::get('td_visitor_counter_cookie')]))
     {
-      setcookie('counter', 'visited', time() + sfConfig::get('td_visitor_counter_cookie_interval'));
+      setcookie(sfConfig::get('td_visitor_counter_cookie'), 'visited', time() + sfConfig::get('td_visitor_counter_cookie_interval'));
       tdCounterTable::mark();
     }
   }
