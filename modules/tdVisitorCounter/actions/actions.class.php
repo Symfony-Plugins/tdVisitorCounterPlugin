@@ -47,7 +47,8 @@ class tdVisitorCounterActions extends sfActions
     $i18n = $this->getContext()->getI18n();
     $day_count = sfConfig::get('td_visitor_counter_days');
     $count_data = Doctrine::getTable('tdCounter')->getLastDaysCounts($day_count - 1)->fetchArray();
-
+var_dump(Doctrine::getTable('tdCounter')->getLastDaysCounts($day_count - 1));
+var_dump($count_data);
     $chartData = array();
     $chartMax = 0;
     $chartLabels = array();
@@ -62,7 +63,10 @@ class tdVisitorCounterActions extends sfActions
 
     //To create a bar chart we need to create a stBarOutline Object
     $bar = new stBarOutline( 80, '#78B9EC', '#3495FE' );
-    $bar->key( 'Number of visitors during last '.$day_count.' days', 10 );
+    $key_label_1 = $i18n->__('Number of visitors during last', array(), 'td_visitor_counter');
+    $key_label_2 = $i18n->format_number_choice('[1] 1 day|(1,+Inf] %1% days',
+      array('%1%' => $day_count), $day_count, 'td_visitor_counter');
+    $bar->key( $key_label_1.' '.$key_label_2, 10 );
 
     //Passing the random data to bar chart
     $bar->data = $chartData;
@@ -124,7 +128,6 @@ class tdVisitorCounterActions extends sfActions
     $key_label_1 = $i18n->__('Number of visitors during last', array(), 'td_visitor_counter');
     $key_label_2 = $i18n->format_number_choice('[1] 1 month|(1,+Inf] %1% months',
       array('%1%' => $month_count), $month_count, 'td_visitor_counter');
-    // ' '.$month_count.' months'
     $bar->key( $key_label_1.' '.$key_label_2, 10 );
 
     //Passing the random data to bar chart

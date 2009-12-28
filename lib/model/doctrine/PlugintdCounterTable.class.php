@@ -39,7 +39,7 @@ class PlugintdCounterTable extends Doctrine_Table
     return Doctrine_Query::create()
       ->select('COUNT(c.id) AS count, DATE_FORMAT(c.created_at, \'%Y-%m-%d\') AS date')
       ->from('tdCounter c')
-      ->where('c.created_at > CONCAT(DATE_FORMAT(DATE_SUB(CURRENT_TIMESTAMP, INTERVAL '.$days.' DAY),\'%Y-%m\'), \'-00\')')
+      ->where('c.created_at > DATE_FORMAT(DATE_SUB(CURRENT_TIMESTAMP, INTERVAL '.$days.' DAY),\'%Y-%m-%d\')')
       ->andWhere('c.created_at < CURRENT_TIMESTAMP')
       ->groupBy('DATE_FORMAT(c.created_at, \'%Y-%m-%d\')');
   }

@@ -123,6 +123,7 @@
     <license>MIT</license>
     <notes>
      * added translation mechanism (with default English and Polish translation provided)
+     * fixed day stats limit (DQL query)
     </notes>
    </release>
 
