@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <header />
+    <body>
+
+      <!-- Main labels -->
+      <trans-unit>
+        <source>Visitors stats</source>
+        <target>Statystyki odwiedzin</target>
+      </trans-unit>
+
+      <!-- Chart labels -->
+      <trans-unit>
+        <source>Number of visitors during last</source>
+        <target>Liczba odwiedzin w ciagu ostatnich</target>
+      </trans-unit>
+
+      <!-- Month chart labels -->
+      <trans-unit>
+        <source>Visitors monthly statistics</source>
+        <target>Miesięczne statystyki odwiedzin</target>
+      </trans-unit>
+      <trans-unit>
+        <source>monthly visitors count</source>
+        <target>miesieczna liczba odwiedzin</target>
+      </trans-unit>
+      <trans-unit>
+        <source>[1] 1 month|(1,+Inf] %1% months</source>
+        <target>[1] miesiaca|[1,+Inf] %1% miesiecy</target>.
+      </trans-unit>
+
+      <!-- Day chart labels -->
+      <trans-unit>
+        <source>Visitors daily statistics</source>
+        <target>Dzienne statystyki odwiedzin</target>
+      </trans-unit>
+      <trans-unit>
+        <source>daily visitors count</source>
+        <target>dzienna liczba odwiedzin</target>
+      </trans-unit>
+      <trans-unit>
+        <source>[1] 1 day|(1,+Inf] %1% days</source>
+        <target>[1] dnia|[1,+Inf] %1% dni</target>.
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

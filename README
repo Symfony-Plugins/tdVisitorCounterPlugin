@@ -73,6 +73,14 @@ The plugin is provided with two predefined charts:
 
 ![daily_stats_image](http://img138.imageshack.us/img138/7503/daily.jpg "daily stats image")
 
+Translations
+============
+
+You may translate tdVisitorCounter module to your own language by creating
+__td_visitor_counter.XX.xml__ file under _modules/tdVisitorCounter/i18n_
+directory (where XX is the language code). So far, English language is the
+default one and additionally Polish translationis provided.
+
 Dependencies
 ============
 

@@ -121,14 +121,11 @@ class tdVisitorCounterActions extends sfActions
 
     //To create a bar chart we need to create a stBarOutline Object
     $bar = new stBarOutline( 80, '#78B9EC', '#3495FE' );
-//    $bar->key( $i18n->__('Number of visitors during last '.$month_count.' months', array(), 'td_visitor_counter'), 10 );
-    $bar->key( $i18n->__(
-      '[0] no resulta|[1] 1 resulta|(1,+Inf] %1% resulta',
-      array('%1%' => $month_count),
-      $month_count,
-      'td_visitor_counter'),
-      10
-    );
+    $key_label_1 = $i18n->__('Number of visitors during last', array(), 'td_visitor_counter');
+    $key_label_2 = $i18n->format_number_choice('[1] 1 month|(1,+Inf] %1% months',
+      array('%1%' => $month_count), $month_count, 'td_visitor_counter');
+    // ' '.$month_count.' months'
+    $bar->key( $key_label_1.' '.$key_label_2, 10 );
 
     //Passing the random data to bar chart
     $bar->data = $chartData;
