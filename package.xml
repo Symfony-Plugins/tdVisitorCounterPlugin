@@ -31,6 +31,7 @@
          <file name="schema.yml" role="data" />
        </dir>
        <file name="routing.yml" role="data" />
+       <file name="tdVisitorCounterPluginConfiguration.class.php role="data" />
      </dir>
 
      <dir name="data">
@@ -56,6 +57,7 @@
            <file name="PlugintdCounterTable.class.php" role="data" />
          </dir>
        </dir>
+       <file name="tdVisitorManager.class.php" role="data" />
      </dir>
 
      <dir name="modules">
