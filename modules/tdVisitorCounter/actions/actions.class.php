@@ -44,6 +44,7 @@ class tdVisitorCounterActions extends sfActions
   */
   public function executeOfcDataVisitorsDaily()
   {
+    $i18n = $this->getContext()->getI18n();
     $day_count = sfConfig::get('td_visitor_counter_days');
     $count_data = Doctrine::getTable('tdCounter')->getLastDaysCounts($day_count - 1)->fetchArray();
 
@@ -68,7 +69,7 @@ class tdVisitorCounterActions extends sfActions
 
     //Creating a stGraph object
     $g = new stGraph();
-    $g->title( 'Visitors daily statistics', '{font-size: 20px;}' );
+    $g->title( $i18n->__('Visitors daily statistics', array(), 'td_visitor_counter'), '{font-size: 20px;}' );
     $g->bg_colour = '#E4F5FC';
     $g->set_inner_background( '#E3F0FD', '#CBD7E6', 90 );
     $g->x_axis_colour( '#8499A4', '#E4F5FC' );
@@ -94,7 +95,7 @@ class tdVisitorCounterActions extends sfActions
     //but its better to use max of data
     $g->set_y_max( $this->getMax($chartMax) );
     $g->y_label_steps( 5 );
-    $g->set_y_legend( 'daily visitors count', 14, '#18A6FF' );
+    $g->set_y_legend( $i18n->__('daily visitors count', array(), 'td_visitor_counter'), 14, '#18A6FF' );
     echo $g->render();
 
     return sfView::NONE;
@@ -102,6 +103,7 @@ class tdVisitorCounterActions extends sfActions
 
   public function executeOfcDataVisitorsMonthly()
   {
+    $i18n = $this->getContext()->getI18n();
     $month_count = sfConfig::get('td_visitor_counter_months');
     $count_data = Doctrine::getTable('tdCounter')->getLastMonthsCounts($month_count - 1)->fetchArray();
 
@@ -119,14 +121,21 @@ class tdVisitorCounterActions extends sfActions
 
     //To create a bar chart we need to create a stBarOutline Object
     $bar = new stBarOutline( 80, '#78B9EC', '#3495FE' );
-    $bar->key( 'Number of visitors during last '.$month_count.' months', 10 );
+//    $bar->key( $i18n->__('Number of visitors during last '.$month_count.' months', array(), 'td_visitor_counter'), 10 );
+    $bar->key( $i18n->__(
+      '[0] no resulta|[1] 1 resulta|(1,+Inf] %1% resulta',
+      array('%1%' => $month_count),
+      $month_count,
+      'td_visitor_counter'),
+      10
+    );
 
     //Passing the random data to bar chart
     $bar->data = $chartData;
 
     //Creating a stGraph object
     $g = new stGraph();
-    $g->title( 'Visitors monthly statistics', '{font-size: 20px;}' );
+    $g->title( $i18n->__('Visitors monthly statistics', array(), 'td_visitor_counter'), '{font-size: 20px;}' );
     $g->bg_colour = '#E4F5FC';
     $g->set_inner_background( '#E3F0FD', '#CBD7E6', 90 );
     $g->x_axis_colour( '#8499A4', '#E4F5FC' );
@@ -152,7 +161,7 @@ class tdVisitorCounterActions extends sfActions
     //but its better to use max of data
     $g->set_y_max( $this->getMax($chartMax) );
     $g->y_label_steps( 5 );
-    $g->set_y_legend( 'monthly visitors count', 14, '#18A6FF' );
+    $g->set_y_legend( $i18n->__('monthly visitors count', array(), 'td_visitor_counter'), 14, '#18A6FF' );
     echo $g->render();
 
     return sfView::NONE;
