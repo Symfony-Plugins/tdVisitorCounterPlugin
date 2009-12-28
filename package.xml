@@ -10,10 +10,10 @@
   <email>tomasz.ducin@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-12-26</date>
+ <date>2009-12-28</date>
  <time>11:00:00</time>
  <version>
-   <release>0.1.1</release>
+   <release>0.1.2</release>
    <api>0.1.0</api>
  </version>
  <stability>
@@ -94,6 +94,11 @@
      <channel>plugins.symfony-project.org</channel>
      <min>0.9.1</min>
     </package>
+    <package>
+     <name>tdCorePlugin</name>
+     <channel>plugins.symfony-project.org</channel>
+     <min>0.1.0</min>
+    </package>
    </required>
   </dependencies>
 
@@ -101,6 +106,24 @@
   </phprelease>
 
   <changelog>
+
+   <release>
+    <version>
+     <release>0.1.2</release>
+     <api>0.1.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <date>2009-12-28</date>
+    <license>MIT</license>
+    <notes>
+     * bound to tdCorePlugin
+     * updated fixtures to use tdRandomDataGenerator class
+    </notes>
+   </release>
 
    <release>
     <version>

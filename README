@@ -16,7 +16,9 @@ command from the project root directory:
 
 or by using the default symfony plugin install command:
 
-    $ ./symfony plugin:install tdVisitorCounterPlugin
+    $ ./symfony plugin:install -s beta tdVisitorCounterPlugin
+
+as the actual release is in its beta stage.
 
 Usage
 =====
@@ -63,13 +65,14 @@ The plugin is provided with two predefined charts:
 
   * monthly stats
 
-![monthly stats image](http://img138.imageshack.us/img138/7210/monhtly.jpg "monthly stats image")
+![monthly_stats_image](http://img138.imageshack.us/img138/7210/monhtly.jpg "monthly stats image")
 
   * daily stats
 
-![daily stats image](http://img138.imageshack.us/img138/7503/daily.jpg "daily stats image")
+![daily_stats_image](http://img138.imageshack.us/img138/7503/daily.jpg "daily stats image")
 
 Dependencies
 ============
 
+  * [tdCorePlugin](http://www.symfony-project.org/plugins/tdCorePlugin)
   * [stOfcPlugin](http://www.symfony-project.org/plugins/stOfcPlugin)
