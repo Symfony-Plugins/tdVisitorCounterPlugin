@@ -4,7 +4,7 @@ tdVisitorCounterPlugin
 Provides funcionalities for easy visitor counting feature, including schema,
 libs, interface and a flash panel to display latest visiting stats.
 
-This plugin is a part of __TD CMS__ and is based on __Doctrine ORM__.
+This plugin is a part of __TD CMF__ and is based on __Doctrine ORM__.
 
 Installation
 ============

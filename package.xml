@@ -3,14 +3,14 @@
   <name>tdVisitorCounterPlugin</name>
   <channel>plugins.symfony-project.org</channel>
   <summary>Provides funcionalities for easy visitor counting feature.</summary>
-  <description>Provides funcionalities for easy visitor counting feature, including schema, libs, interface and a flash panel to display latest visiting stats. This plugin is a part of TD CMS and is based on Doctrine ORM.</description>
+  <description>Provides funcionalities for easy visitor counting feature, including schema, libs, interface and a flash panel to display latest visiting stats. This plugin is a part of TD CMF and is based on Doctrine ORM.</description>
  <lead>
   <name>Tomasz Ducin</name>
   <user>tkoomzaaskz</user>
   <email>tomasz.ducin@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-12-29</date>
+ <date>2009-12-31</date>
  <time>11:00:00</time>
  <version>
    <release>0.1.3</release>
@@ -119,11 +119,12 @@
      <api>beta</api>
     </stability>
     <license uri="http://www.symfony-project.org/license">MIT license</license>
-    <date>2009-12-29</date>
+    <date>2009-12-31</date>
     <license>MIT</license>
     <notes>
      * added translation mechanism (with default English and Polish translation provided)
      * fixed day stats limit (DQL query)
+     * updated documentation
     </notes>
    </release>
 

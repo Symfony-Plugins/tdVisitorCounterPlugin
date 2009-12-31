@@ -3,8 +3,7 @@
  * tdVisitorCounter actions.
  *
  * @package    tdVisitorCounterPlugin
- * @class      tdVisitorCounterActions
- * @author     Tomasz Ducin
+ * @author     Tomasz Ducin <tomasz.ducin@gmail.com>
  * @version    SVN: $Id: actions.class.php
  */
 class tdVisitorCounterActions extends sfActions
@@ -47,8 +46,7 @@ class tdVisitorCounterActions extends sfActions
     $i18n = $this->getContext()->getI18n();
     $day_count = sfConfig::get('td_visitor_counter_days');
     $count_data = Doctrine::getTable('tdCounter')->getLastDaysCounts($day_count - 1)->fetchArray();
-var_dump(Doctrine::getTable('tdCounter')->getLastDaysCounts($day_count - 1));
-var_dump($count_data);
+
     $chartData = array();
     $chartMax = 0;
     $chartLabels = array();

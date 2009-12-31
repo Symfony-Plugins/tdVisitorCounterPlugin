@@ -7,10 +7,8 @@
  * tdVisitorManager
  *
  * @author Tomasz Ducin <tomasz.ducin@gmail.com>
- * @package symfony
- * @subpackage tdVisitorCounterPlugin
+ * @package tdVisitorCounterPlugin
  */
-
 class tdVisitorManager
 {
   /**

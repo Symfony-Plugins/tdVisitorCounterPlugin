@@ -6,9 +6,8 @@
 /**
  * tdVisitorCounterPluginConfiguration
  *
- * @author Tomasz Ducin <tomasz.ducin@gmail.com>
- * @package symfony
- * @subpackage tdVisitorCounterPlugin
+ * @package    tdVisitorCounterPlugin
+ * @author     Tomasz Ducin <tomasz.ducin@gmail.com>
  */
 
 class tdVisitorCounterPluginConfiguration extends sfPluginConfiguration
