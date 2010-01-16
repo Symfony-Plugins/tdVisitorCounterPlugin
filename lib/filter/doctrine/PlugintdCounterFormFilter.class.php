@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PlugintdCounter form.
+ * PlugintdCounter filter form.
  *
  * @package    tdVisitorCounterPlugin
  * @subpackage filter
