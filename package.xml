@@ -10,10 +10,10 @@
   <email>tomasz.ducin@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-12-31</date>
+ <date>2010-01-22</date>
  <time>11:00:00</time>
  <version>
-   <release>0.1.3</release>
+   <release>0.1.4</release>
    <api>0.1.0</api>
  </version>
  <stability>
@@ -99,7 +99,7 @@
     <package>
      <name>tdCorePlugin</name>
      <channel>plugins.symfony-project.org</channel>
-     <min>0.1.1</min>
+     <min>0.1.7</min>
     </package>
    </required>
   </dependencies>
@@ -108,6 +108,23 @@
   </phprelease>
 
   <changelog>
+
+   <release>
+    <version>
+     <release>0.1.4</release>
+     <api>0.1.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <date>2010-01-22</date>
+    <license>MIT</license>
+    <notes>
+     * fixed daily stats charts performance
+    </notes>
+   </release>
 
    <release>
     <version>

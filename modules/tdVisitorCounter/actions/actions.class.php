@@ -47,15 +47,36 @@ class tdVisitorCounterActions extends sfActions
     $day_count = sfConfig::get('td_visitor_counter_days');
     $count_data = Doctrine::getTable('tdCounter')->getLastDaysCounts($day_count - 1)->fetchArray();
 
+    $tmp_data = array();
+    foreach($count_data as $data)
+    {
+      $tmp_data[$data['date']] = $data['count'];
+    }
+
+    $day_difference = 60 * 60 * 24;
+    $time = time() - $day_difference * ($day_count -1);
+    $dates = array();
+    for($i = 0; $i < $day_count; $i++)
+    {
+      $dates[] = date("Y-m-d", $time);
+      $time += $day_difference;
+    }
+
+    $result_data = array();
+    foreach($dates as $date)
+    {
+      $result_data[$date] = (isset($tmp_data[$date]) ? $tmp_data[$date] : 0 );
+    }
+
     $chartData = array();
     $chartMax = 0;
     $chartLabels = array();
 
     //Array with sample random data
-    foreach($count_data as $data)
+    foreach($result_data as $date => $count)
     {
-      $chartData[] = $data['count'];
-      $chartLabels[] = $data['date'];
+      $chartData[] = $count;
+      $chartLabels[] = $date;
       if ($data['count'] > $chartMax) $chartMax = $data['count'];
     }
 
