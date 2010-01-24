@@ -10,10 +10,10 @@
   <email>tomasz.ducin@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2010-01-22</date>
+ <date>2010-01-24</date>
  <time>11:00:00</time>
  <version>
-   <release>0.1.4</release>
+   <release>0.1.5</release>
    <api>0.1.0</api>
  </version>
  <stability>
@@ -65,6 +65,9 @@
          <dir name="actions">
            <file name="actions.class.php" role="data" />
          </dir>
+         <dir name="i18n">
+           <file name="td.pl.xml" role="data" />
+         </dir>
          <dir name="templates">
            <file name="indexSuccess.php" role="data" />
          </dir>
@@ -108,6 +111,24 @@
   </phprelease>
 
   <changelog>
+
+   <release>
+    <version>
+     <release>0.1.5</release>
+     <api>0.1.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <date>2010-01-24</date>
+    <license>MIT</license>
+    <notes>
+     * included translations
+     * improved documentation
+    </notes>
+   </release>
 
    <release>
     <version>

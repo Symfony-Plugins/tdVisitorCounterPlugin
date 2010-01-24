@@ -18,7 +18,8 @@ or by using the default symfony plugin install command:
 
     $ ./symfony plugin:install -s beta tdVisitorCounterPlugin
 
-as the actual release is in its beta stage.
+as the actual release is in its beta stage. There are no assetsto ublish for
+this plugin since it relies on stOfcPlugin (open flash charts).
 
 Usage
 =====
@@ -77,7 +78,7 @@ Translations
 ============
 
 You may translate tdVisitorCounter module to your own language by creating
-__td_visitor_counter.XX.xml__ file under _modules/tdVisitorCounter/i18n_
+__td.XX.xml__ file under _modules/tdVisitorCounter/i18n_
 directory (where XX is the language code). So far, English language is the
 default one and additionally Polish translationis provided.
 
