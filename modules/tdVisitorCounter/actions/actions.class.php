@@ -77,7 +77,7 @@ class tdVisitorCounterActions extends sfActions
     {
       $chartData[] = $count;
       $chartLabels[] = $date;
-      if ($data['count'] > $chartMax) $chartMax = $data['count'];
+      if ($count > $chartMax) $chartMax = $count;
     }
 
     //To create a bar chart we need to create a stBarOutline Object
